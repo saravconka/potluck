@@ -1,0 +1,49 @@
+<section class="row">
+    <section class="btn pop-btn yellow pot-mob-menu-outer mb0">
+        <section class="col-xs-10">
+            <label class="sprite pot-mob-menu">Potluck</label>
+        </section>
+                
+          	<section class="col-xs-2">
+            <div class="sprite pot-search"></div>
+            <div class="sprite pot-moreover"></div>
+        </section>
+    </section>
+
+    <section class="btn pop-btn yellow mb0">
+        <button type="submit" class="btn pop-btn" ng-click="createEvent()">Create Event</button>
+    </section>
+
+</section>
+
+<section class="row">
+    <section class="col-xs-12 pop-tab p0">
+        <ul>
+            <li class="active"><a href="#">Upcoming</a></li>
+            <li><a href="#">Past</a></li>
+        </ul>
+    </section>
+</section>
+
+
+<section class="row pot-details" ng-repeat="eventItem in eventList">
+    <section class="col-xs-12 p0">
+        <article class="col-xs-9">
+            <h3 class="mt0">
+                {{ eventItem.EventName }}
+            </h3>
+            <p class="pot-time col-gry">{{ eventItem.EventStartDateTime }}| 12.30 pm - {{ eventItem.EventEndDateTime }}</p>
+        </article>
+        <article class="col-xs-3 pot-name col-gry">
+            {{ eventItem.EventCreatedBy }}
+        </article>
+    </section>
+
+    <section class="col-xs-12 p0 pop-confirm">
+        <ul>
+            <li><a href="#" class="sprite opt-yes col-grn">Yes</a></li>
+            <li><a href="#" class="sprite opt-no col-red">No</a></li>
+            <li><a href="#" class="sprite opt-may col-blue">May Be</a></li>
+        </ul>
+    </section>
+</section>

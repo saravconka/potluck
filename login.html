@@ -1,0 +1,64 @@
+
+        
+        <!-- social icons -->
+    	<section class="row">
+        	<section class="col-xs-12 pop-connect">
+        	    <h3>MyPotluck</h3>
+        	    Did you know that hosting or participating in a potluck meet is so much fun and easy with MyPotluck app?<br/>
+        	    MyPotluck app feartures:<br/>
+    	        . On the go event setup<br/>
+        	    . Invite friends through facebook or googleplus<br/>
+        	    . Setup theme/cuisines of your potluck event<br/>
+        	    . Help friends to keep them live updated on the event.<br/>
+        	    . And ask us what else you need to make the app a fun experience!<br/>
+        	    
+        	    <h3>Try our new MyPotluck app for free!</h3>
+        	    
+        	    
+            	<h3>Connet with</h3>
+                <ul>
+                	<li><a href="javascript:;"><img src="images/facebook.png"></a></li>
+                    <li><a href="javascript:;"><img src="images/google_plus.png"></a></li>
+                    <li><a href="javascript:;"><img src="images/twitter.png"></a></li>
+                </ul>
+            </section>
+        </section><!-- /social icons -->
+    
+    	<!-- sep -->
+    	<section class="row">
+        	<section class="col-xs-12">
+            	<h3 class="pot-divider">or</h3>
+            </section>
+        </section><!-- /sep -->
+    
+    	<!-- Login form -->
+    	<section class="row">
+           <section class="col-xs-12">
+           		<form name="loginform" novalidate>
+                	<article class="form-group pot-form-group">
+                     	<label for="username" class="label-hide">Username</label>
+                        <input type="text" class="form-control pop-form-control sprite us" name="username" placeholder="User name" ng-model="username" required>
+                        <br/>
+                        <span style="color:red" ng-show="loginform.username.$dirty && loginform.username.$invalid && loginform.username.$error.required">User name is required</span>
+                        
+                    </article>
+                    
+                    <article class="form-group pot-form-group">
+                     	<label for="password" class="label-hide">Password</label>
+                        <input type="password" class="form-control pop-form-control sprite pd" name="password" placeholder="Password" ng-model="password" required>
+                        <br/>
+                        <span style="color:red" ng-show="loginform.password.$dirty && loginform.password.$invalid && loginform.password.$error.required">password is required</span>
+                    </article>
+                    <button type="submit" class="btn pop-btn orange" ng-disabled="loginform.username.$invalid || loginform.password.$invalid" ng-click="login()">Submit</button>
+                </form>
+           </section>
+        </section><!-- /Login form -->
+        
+        <section class="row">
+        	<section class="col-xs-12">
+            	<article class="pot-forgot text-center">
+            		<a href="/forgotpassword">Forgot?</a>
+                	<a href="/registration">Create</a>
+                </article>
+            </section>
+        </section>

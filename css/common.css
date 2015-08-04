@@ -1,0 +1,258 @@
+body {font-family: 'robotoregular';}
+ul, li {list-style-type: none}
+/*img {height: auto; max-width: 100%}*/
+
+.pop-bg {height:auto; background:url(../images/bg.png) no-repeat; background-size:cover;}
+.m0 {margin: 0}
+.p0 {padding: 0}
+.pl0 {padding-left: 0}
+.pr0 {padding-right: 0}
+.mt0 {margin-top: 0}
+.mt10 {margin-top: 10px}
+.mb0 {margin-bottom: 0 !important}
+.mb50 {margin-bottom: 50px}
+
+/* -------------- Button styles ---------------- */
+.pop-btn {margin-bottom: 25px; color: #fff; border-radius: 0; min-width: 100%; font-size: 22px; font-family: 'robotoregular'; padding: 9px 12px}
+
+.pop-btn.orange {background: #f57365; box-shadow: 0 3px 0 #dc675b}
+.pop-btn.orange:hover {color: #fff}
+
+.pop-btn.gry {background: #cacaca; box-shadow: 0 3px 0 #b5b5b5}
+.pop-btn.gry:hover {color: #fff}
+
+.pop-btn.yellow {
+	background: #f6a200; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f6a200 0%, #f9b301 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6a200), color-stop(100%,#f9b301)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f6a200 0%,#f9b301 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f6a200 0%,#f9b301 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f6a200 0%,#f9b301 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f6a200 0%,#f9b301 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6a200', endColorstr='#f9b301',GradientType=0 ); /* IE6-9 */
+	box-shadow: 0 3px 0 #e5a501
+}
+.pop-btn.yellow:hover, .pop-btn.yellow:focus {color: #ffffff}
+
+/* -------------- Form styles ---------------- */
+.sprite {background: url('../images/sprite.png') no-repeat; display: inline-block}
+.us {background-position: 10px 5px; padding-left: 58px}
+.pd {background-position: 10px -55px; padding-left: 58px}
+
+.arrow {background: url('../images/arrow.png') no-repeat left center; display: block; text-align: left; padding-left: 20px}
+
+.pop-form-control, .pop-form-control:focus {background-color: #fff; box-shadow: none; border-radius: 0; border: 0; height: 44px; font-family: 'robotolight'; font-size: 20px}
+
+.pot-form-group {position: relative; margin-bottom: 30px}
+.pot-form-group label.label-hide {position: absolute; width: 1px; height: 1px; margin-left: -1px; overflow: hidden}
+.error-msg {position: absolute; display: block; top: 100%; font-size: 12px; padding-left: 15px}
+
+/* -------------- Border styles ---------------- */
+.gry-bdr, .gry-bdr:focus {border: 2px solid #cacaca}
+.org-bdr, .org-bdr:focus {border: 2px solid #f9b301}
+.red-bdr, .red-bdr:focus {border: 2px solid #c40000}
+
+/* -------------- colors ---------------- */
+.col-blk {color: #101010}
+.col-red {color: #c40000}
+.col-blu {color: #00a1ab}
+.col-grn {color: #669000}
+.col-gry {color: #848484}
+
+.bg-lgt-gry {background: #f9f9f9}
+
+/* -------------- connect ---------------- */
+.pop-connect h3 {color: #fff; font-family: 'robotomedium'; font-family: 38px}
+.pop-connect {margin-top: 33px; min-height: 200px; background: url('../images/trans-bg.png') repeat}
+.pop-connect ul {padding-left: 0}
+.pop-connect ul li {display: inline-block; margin-left: 48px; width: 12%}
+.pop-connect ul li:first-child {margin-left: 0}
+.pop-connect ul li a {text-indent: -9999px}
+.pop-connect ul li a img{ width:100%; height:auto;}
+
+/*-------------------- forgot create links --------------------*/
+.pot-forgot {margin-top: 50px; font-size: 22px; padding: 20px 0 50px 0; border-top: 1px solid #f4fdff}
+.pot-forgot a {color: #fff; font-family: 'robotolight'; border-left: 1px solid #fff; padding: 0 35px 0 40px}
+.pot-forgot a:hover {text-decoration: none}
+.pot-forgot a:first-child {border-left: 0; padding-left: 0}
+
+/*-------------------- or --------------------*/
+h3.pot-divider {
+    overflow: hidden;
+    text-align: center;
+	color: #fff;
+	font-family: 'robotomedium';
+	font-size: 19px;
+	margin-bottom: 54px;
+}
+
+h3.pot-divider:before,
+h3.pot-divider:after {
+    background-color: #f4fdff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+h3.pot-divider:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+h3.pot-divider:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/* -------------- custom checkbox ---------------- */
+.pot-checkbox {margin-bottom: 40px}
+.checkbox label.pot-terms {padding-left: 0}
+
+.custom-checkbox{
+		vertical-align: bottom;
+		top: 5px;
+		width: 33px;
+		height: 33px;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		background: url("../images/checkbox.png") no-repeat;
+		font-family: 'robotolight';
+		margin-right: 7px;
+}
+
+.custom-checkbox:hover{
+		background: url("../images/checkbox.png") no-repeat;
+}
+	
+.custom-checkbox.selected{
+	background: url("../images/checkbox-selected.png") no-repeat;
+}
+	
+.custom-checkbox input[type="checkbox"]{
+	margin: 0;
+	position: absolute;
+	z-index: 2;            
+	cursor: pointer;
+	outline: none;
+	opacity: 0;
+	/* CSS hacks for older browsers */
+	_noFocusLine: expression(this.hideFocus=true); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-khtml-opacity: 0;
+	-moz-opacity: 0;
+}
+
+
+/*------------ pot ---------------------*/
+.pot-mob-menu-outer {text-align: left; cursor: default}
+.pot-mob-menu {background-position: 0 -242px; color: #fff; padding-left: 40px; text-align: left; font-family: 'robotolight'; cursor: pointer}
+
+.pot-search {background-position: 0 -285px; width: 22px; height: 28px; cursor: pointer}
+.pot-moreover {background-position: 0 -329px; width: 10px; height: 28px; cursor: pointer; margin-left: 20px}
+
+.pop-tab {background: #f5f5f5}`
+.pop-tab ul {margin: 25px 0 20px 0}
+.pop-tab ul li {float: left; width: 49.8%; border-bottom: 2px solid #808080; padding-bottom: 20px; padding-top: 15px; margin-left: 0.4%; cursor: pointer}
+.pop-tab ul li:hover, .pop-tab ul li.active {border-bottom: 2px solid #f57365}
+.pop-tab ul {padding-left: 0}
+.pop-tab ul li:first-child {margin-left: 0}
+.pop-tab ul li a {border-left: 1px solid #5a5a5a;  color: #202020; font-size: 19px; text-decoration: none;  display: block; text-align: center}
+.pop-tab ul li:first-child a {border-left: 0}
+.pop-tab ul li.active a{color: #f57365}
+
+.pop-tab-three ul {padding-left: 0}
+.pop-tab-three ul li {margin-left: 0.5%}
+.pop-tab-three ul li.w33 {width: 33%}
+
+.pot-details h3{font-size: 19px; color: #505050; margin-bottom: 5px}
+.pot-details {padding: 10px 0; border-top: 1px solid #cccccc}
+.pot-details p {font-size: 14px; margin-bottom: 2px}
+.pot-name {font-size: 12px; text-align: right}
+.pop-confirm ul {margin: 10px 0 10px 15px; padding: 0}
+.pop-confirm ul li {display: inline-block; border-left: 1px solid #cccccc; padding: 0 10px 0 15px; font-size: 19px; font-family: 'robotolight'; vertical-align: middle}
+.pop-confirm ul li:last-child {border-right: 1px solid #ccc}
+.pop-confirm ul li a {text-decoration: none}
+.opt-yes {padding-left: 30px; background-position: 0 -116px; padding-top: 0px}
+.opt-no {padding-left: 30px; background-position: 0 -156px; padding-top: 0px}
+.opt-may {padding-left: 26px;background-position: 0 -202px; padding-top: 0px}
+
+.pot-details:nth-child(even){
+    background: #f9f9f9;
+}
+.pot-details:first-child {border-top: 0}
+
+.pot-details-list ul{padding: 0;}
+.pot-details-list li {display: block; padding-bottom: 10px}
+.host-ico {padding-left: 25px; background-position: 0 -380px}
+.cal-ico {padding-left: 25px; background-position: 0 -416px}
+.loc-ico {padding-left: 25px; background-position: 0 -452px}
+
+.pot-serving-outer {padding-top: 25px; border-top: 1px solid #ccc}
+    
+
+/* -------------- Fonts ---------------- */
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light.eot');
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light.woff2') format('woff2'),
+         url('../fonts/Roboto-Light.woff') format('woff'),
+         url('../fonts/Roboto-Light.ttf') format('truetype'),
+         url('../fonts/Roboto-Light.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Medium.woff2') format('woff2'),
+         url('../fonts/Roboto-Medium.woff') format('woff'),
+         url('../fonts/Roboto-Medium.ttf') format('truetype'),
+         url('../fonts/Roboto-Medium.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* .social {background: url('../images/social-icon.png') no-repeat; display: inline-block; width: 139px; height: 139px}
+.fb {background-postion: 0 0}
+.gp {background-position: 0 -168px}
+.tw {background-position: 0 -337px} */
+
+
+/*
+@media only screen and (min-width : 320px) and (max-width : 600px) {
+ .pop-connect ul li img {width: 90%}	
+} */
+
+@media (min-width: 320px) and (max-width: 768px) {
+	.pop-connect ul li {width: 24%}
+}
+
+
+	
+

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PotluckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="EventStartDateTime" Type="datetime" />
+          <Property Name="EventEndDateTime" Type="datetime" />
+          <Property Name="EventCreatedBy" Type="varchar" MaxLength="60" />
+          <Property Name="EventCreatedDate" Type="datetime" />
+          <Property Name="EventModifiedBy" Type="varchar" MaxLength="60" />
+          <Property Name="EventModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="PotluckModelStoreContainer">
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PotluckModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="EventName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EventStartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EventEndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EventCreatedBy" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="EventCreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="EventModifiedBy" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="EventModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="PotluckEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Events" EntityType="Self.Event" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PotluckModelStoreContainer" CdmEntityContainer="PotluckEntities">
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="PotluckModel.Event">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="EventName" ColumnName="EventName" />
+                <ScalarProperty Name="EventStartDateTime" ColumnName="EventStartDateTime" />
+                <ScalarProperty Name="EventEndDateTime" ColumnName="EventEndDateTime" />
+                <ScalarProperty Name="EventCreatedBy" ColumnName="EventCreatedBy" />
+                <ScalarProperty Name="EventCreatedDate" ColumnName="EventCreatedDate" />
+                <ScalarProperty Name="EventModifiedBy" ColumnName="EventModifiedBy" />
+                <ScalarProperty Name="EventModifiedDate" ColumnName="EventModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

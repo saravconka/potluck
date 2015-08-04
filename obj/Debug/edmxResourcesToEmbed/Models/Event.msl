@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PotluckModelStoreContainer" CdmEntityContainer="PotluckEntities">
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="PotluckModel.Event">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventStartDateTime" ColumnName="EventStartDateTime" />
+          <ScalarProperty Name="EventEndDateTime" ColumnName="EventEndDateTime" />
+          <ScalarProperty Name="EventCreatedBy" ColumnName="EventCreatedBy" />
+          <ScalarProperty Name="EventCreatedDate" ColumnName="EventCreatedDate" />
+          <ScalarProperty Name="EventModifiedBy" ColumnName="EventModifiedBy" />
+          <ScalarProperty Name="EventModifiedDate" ColumnName="EventModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

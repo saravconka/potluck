@@ -1,0 +1,69 @@
+
+    	<section class="row">
+        	<button type="submit" class="btn pop-btn yellow sprite us"><span class="arrow">Sign Up</span></button>
+        </section>
+    	
+    	<!-- Login form -->
+    	<section class="row">
+           <section class="col-xs-12">
+           		<form name="createUserForm" novalidate>
+                	<article class="form-group pot-form-group">
+                     	<label for="username" class="label-hide">Username</label>
+                        <input type="text" class="form-control pop-form-control gry-bdr org-bdr" name="username" placeholder="Name" required>
+                        <span class="col-red error-msg" ng-show="createUserForm.username.$dirty && createUserForm.username.$invalid && createUserForm.username.$error.required">User name is required</span>
+                    </article>
+                    
+                    <article class="form-group pot-form-group">
+                     	<label for="password" class="label-hide">Email Address</label>
+                        <input type="email" class="form-control pop-form-control gry-bdrr" ng-class="createUserForm.emailAddress.$dirty && createUserForm.emailAddress.$invalid && 'ed-bdr' || ''" name="emailAddress" placeholder="Email Address" required>
+                        
+                        <span class="col-red error-msg" ng-show="createUserForm.emailAddress.$dirty && createUserForm.emailAddress.$invalid && createUserForm.emailAddress.$error.required">Email is required</span>
+                        <span class="col-red error-msg" ng-show="createUserForm.emailAddress.$dirty && createUserForm.emailAddress.$invalid">Please enter a valid email</span>
+                    </article>
+                    
+                    <article class="form-group pot-form-group">
+                     	<label for="password" class="label-hide">Password</label>
+                        <input type="password" class="form-control pop-form-control gry-bdr" id="password" placeholder="Password">
+                    </article>
+                    
+                    <article class="form-group pot-form-group">
+                     	<label for="password" class="label-hide">Confirm Password</label>
+                        <input type="password" class="form-control pop-form-control gry-bdr" id="confirm password" placeholder="Confirm Password">
+                    </article>
+                    
+                     <article class="checkbox pot-checkbox">
+                     	<label class="pot-terms"><input type="checkbox" name="terms" value="Terms and conditions" /> I have read the terms and conditions
+                        </label>
+                      </article>
+                      
+                    <button type="submit" class="btn pop-btn orange">Submit</button>
+                    <button type="submit" class="btn pop-btn gry" ng-click="cancelRegistration()">Cancel</button>
+                </form>
+           </section>
+        </section><!-- /Login form -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
+    <script type="text/javascript">
+    function customCheckbox(checkboxName){
+        var checkBox = $('input[name="'+ checkboxName +'"]');
+        $(checkBox).each(function(){
+            $(this).wrap( "<span class='custom-checkbox'></span>" );
+            if($(this).is(':checked')){
+                $(this).parent().addClass("selected");
+            }
+        });
+        $(checkBox).click(function(){
+            $(this).parent().toggleClass("selected");
+        });
+    }
+    $(document).ready(function (){
+        customCheckbox("terms[]");
+    })
+    
+    </script>
+  
