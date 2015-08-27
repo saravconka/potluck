@@ -14,7 +14,7 @@ controllers.controller('loginCtrl', ['$scope', '$location', 'AuthenticationSvc',
         //alert($scope.username + ' - ' + $scope.password);
 
         if (AuthenticationSvc.authenticate($scope.username, $scope.password)) {
-            alert(AuthenticationSvc.current.userProfile.name + ' user is authentcated');
+            alert(AuthenticationSvc.current.userProfile.name + ' user is authenticated');
 
             $scope.base = AuthenticationSvc.current;
             $scope.userName = AuthenticationSvc.current.userProfile.name;
@@ -43,6 +43,8 @@ controllers.controller('landingCtrl', ['$scope', '$location', 'AuthenticationSvc
     EventSvc.getEvents().success(function (data) {
         console.log(data[0].EventName);
         $scope.eventList = data;
+    }).error(function (e) {
+        console.log(e);
     });
     
 }]);
@@ -61,8 +63,6 @@ controllers.controller('eventCtrl', ['$scope', '$location', 'AuthenticationSvc',
     $scope.createEvent = function () {
         alert($scope.eventname);
 
-        
-
         EventSvc.AddEvent(
             $scope.eventname,
             $scope.eventdate,
@@ -73,7 +73,17 @@ controllers.controller('eventCtrl', ['$scope', '$location', 'AuthenticationSvc',
         ).success(function (data) {
             alert("Successfully create event: " + $scope.eventname);
             $location.path('/landingpage');
-        }).error(function(e){
+        }).error(function (e) {
+
+
+            
+            $exceptionHandler(e)
+
+            /*
+            <div class="alert alert-danger">
+                <strong>Exception</strong> Indicates a dangerous or potentially negative action.
+            </div>
+            */
             console.log(e);
         });
             

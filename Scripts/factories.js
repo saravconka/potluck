@@ -90,7 +90,7 @@ factories.factory('AuthenticationSvc', ['$http', 'StorageFactory', function($htt
 }]);
 
 
-factories.factory('EventSvc', ['$http', 'StorageFactory', function ($http, StorageFactory) {
+factories.factory('EventSvc', ['$http', '$exceptionHandler', 'StorageFactory', function ($http, $exceptionHandler, StorageFactory) {
 
     var _eventApi = {};
 
@@ -103,6 +103,8 @@ factories.factory('EventSvc', ['$http', 'StorageFactory', function ($http, Stora
             return data;
 
         }).error(function (error) {
+
+            $exceptionHandler(error);
 
             console.log(error);
 
@@ -137,6 +139,8 @@ factories.factory('EventSvc', ['$http', 'StorageFactory', function ($http, Stora
                 return data;
 
             }).error(function (error) {
+
+                $exceptionHandler(error);
 
                 console.log(error);
 

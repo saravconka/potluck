@@ -3,35 +3,35 @@
         <form name="createEventForm" novalidate>
             <article class="form-group pot-form-group">
                 <label for="eventname" class="label-hide">Event Name</label>
-                <input type="text" class="form-control pop-form-control sprite us" name="eventname" placeholder="Event name" ng-model="eventname" required>
+                <input type="text" class="form-control pop-form-control sprite us" name="eventname" placeholder="Event name" ng-model="eventname" required />
                 <br />
                 <span style="color:red" ng-show="createEventForm.eventname.$dirty && createEventForm.eventname.$invalid && createEventForm.eventname.$error.required">Event name is required</span>
             </article>
 
             <article class="form-group pot-form-group">
                 <label for="eventdate" class="label-hide">Date</label>
-                <input type="date" class="form-control pop-form-control sprite pd" name="eventdate" placeholder="Event date" ng-model="eventdate" required>
+                <input type="date" class="form-control pop-form-control sprite pd" name="eventdate" placeholder="Event date" ng-model="eventdate" required />
                 <br />
                 <span style="color:red" ng-show="createEventForm.eventdate.$dirty && createEventForm.eventdate.$invalid && createEventForm.eventdate.$error.required">Event date is required</span>
             </article>
             
             <article class="form-group pot-form-group">
                 <label for="starttime" class="label-hide">Start Time</label>
-                <input type="time" class="form-control pop-form-control sprite pd" name="starttime" placeholder="Start time" ng-model="starttime" required>
+                <input type="time" class="form-control pop-form-control sprite pd" name="starttime" placeholder="Start time" ng-model="starttime" required />
                 <br />
                 <span style="color:red" ng-show="createEventForm.starttime.$dirty && createEventForm.starttime.$invalid && createEventForm.starttime.$error.required">Start time is required</span>
             </article>
 
             <article class="form-group pot-form-group">
                 <label for="eventtime" class="label-hide">Add End Time(optional)</label>
-                <input type="time" class="form-control pop-form-control sprite pd" name="endtime" placeholder="End time" ng-model="endtime">
+                <input type="time" class="form-control pop-form-control sprite pd" name="endtime" placeholder="End time" ng-model="endtime" />
                 <br />
                 <span style="color:red" ng-show="createEventForm.endtime.$dirty && createEventForm.endtime.$invalid && createEventForm.endtime.$error.required">Event date is required</span>
             </article>
 
             <article class="form-group pot-form-group">
                 <label for="eventlocation" class="label-hide">Location</label>
-                <input type="text" class="form-control pop-form-control sprite us" name="eventlocation" placeholder="Location" ng-model="eventlocation" required>
+                <input type="text" class="form-control pop-form-control sprite us" name="eventlocation" placeholder="Location" ng-model="eventlocation" required />
                 <br />
                 <span style="color:red" ng-show="createEventForm.eventlocation.$dirty && createEventForm.eventlocation.$invalid && createEventForm.eventlocation.$error.required">Event location is required</span>
             </article>

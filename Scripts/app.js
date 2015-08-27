@@ -5,6 +5,16 @@ var potluck = angular.module('potluck',[
   'potluck.controllers'
 ]);
 
+/* TODO: Write global exception handler method to inject and display user friendly error msg
+
+angular.module('exceptionOverride', []).factory('$exceptionHandler', function () {
+    return function (exception, cause) {
+        exception.message += ' (caused by "' + cause + '")';
+        throw exception;
+    };
+});
+*/
+
 
 //Routing configurations
 potluck.config(function($routeProvider, $locationProvider){
